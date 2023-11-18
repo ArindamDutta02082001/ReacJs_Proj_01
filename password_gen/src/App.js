@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
 function App() {
+
+  // how to use Slider
+  // how to use useRef Hook
+  
   let [length, setLength] = useState(4);
   let [num, setNum] = useState(false);
   let [char, setChar] = useState(false);
