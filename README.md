@@ -38,15 +38,15 @@ How to write route paths and create a common Layout
 
 <pre>
  <code>
-    **in Layout.js**
+**in Layout.js**
 
 import { Outlet } from "react-router-dom";  // will be replaced by other comp
 function Layout() {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <Header></Header>
+      <Outlet></Outlet>
+      <Footer></Footer>
     <>
   );
 }
@@ -57,9 +57,8 @@ export default Layout;
 
 <pre>
 <code>
-
- **in RoutePath.js**
-  const routerPaths1 = createBrowserRouter([
+**in RoutePath.js**
+const routerPaths1 = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
@@ -83,11 +82,10 @@ export default Layout;
     ],
   },
 ]);
+
+ function RouterPath() {
+   return <RouterProvider router={routerPaths1} />;
+              }
+ export default RouterPath;
 </code>
 </pre>
-
-function RouterPath() {
-  return <RouterProvider router={routerPaths1} />;
-}
-export default RouterPath;
-
