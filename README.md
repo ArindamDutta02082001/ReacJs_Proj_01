@@ -3,7 +3,7 @@ This is a hub where I keep my practice projects
 
 <h2>Interview Counter Qstn</h2>
 <br/>
-![image](https://github.com/ArindamDutta02082001/ReacJs_Proj_01/assets/83761396/0b44e312-7c05-4b03-bb1b-7cf30861297b)
+![image](https://github.com/ArindamDutta02082001/ReacJs_Proj_01/assets/83761396/6767818f-282c-436b-9ecd-e62bf6c3aab8)
 
 <hr/>
 
@@ -35,6 +35,7 @@ How to write route paths and create a common Layout
 <br/>
 ![image](https://github.com/ArindamDutta02082001/ReacJs_Proj_01/assets/83761396/f87276db-8074-49e1-8832-667c0d298c47)
 
+<code>
   **in Layout.js**
 
 import { Outlet } from "react-router-dom";  // will be replaced by other comp
@@ -75,6 +76,7 @@ export default Layout;
     ],
   },
 ]);
+</code>
 
 function RouterPath() {
   return <RouterProvider router={routerPaths1} />;
