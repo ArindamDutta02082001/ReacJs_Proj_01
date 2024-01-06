@@ -44,9 +44,9 @@ import { Outlet } from "react-router-dom";  // will be replaced by other comp
 function Layout() {
   return (
     <>
-      <Header></Header>
-      <Outlet></Outlet>
-      <Footer></Footer>
+      <Header
+      <Outlet
+      <Footer>
     <>
   );
 }
