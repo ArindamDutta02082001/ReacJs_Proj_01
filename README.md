@@ -35,6 +35,7 @@ How to write route paths and create a common Layout
 <br/>
 ![image](https://github.com/ArindamDutta02082001/ReacJs_Proj_01/assets/83761396/f87276db-8074-49e1-8832-667c0d298c47)
 
+<pre>
 <code>
   **in Layout.js**
 
@@ -77,6 +78,7 @@ export default Layout;
   },
 ]);
 </code>
+</pre>
 
 function RouterPath() {
   return <RouterProvider router={routerPaths1} />;
