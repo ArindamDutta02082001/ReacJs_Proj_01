@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 function App() {
   //variable declaration  dont see
+  // what is the difference betwee the below 2
   const str = `function increment()
   {
   setCount((count += 1))
@@ -64,11 +65,14 @@ function App() {
         </pre>
       </div>
       <div>
-        Ans - No it will update single time | as useState hook update the state
-        (state Var) at chunk only oncee | if we write this it will update
-        directly 4 times <br />
-        in the down we are taking the previous and then updating it , not in
-        chunk
+        <p>
+          Ans - No it will update single time | as in useState , setCount will
+          set the new value for the DOM to update in the next render. so it will
+          update the state (state Var) at chunk only oncee | instead if we write
+          the below code it will update directly 4 times <br />
+          in the down we are taking the previous value and then telling DOM for
+          updating it
+        </p>
         <br />
         <pre>
           <code> {ans}</code>
