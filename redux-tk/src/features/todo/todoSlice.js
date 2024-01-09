@@ -1,3 +1,9 @@
+/*
+ * initialState -- it is the main storage area of redux-toolkit , here 1 todo is stored initially
+ * we create a slice function , which has the name , inititalState , and the list of reducers
+ * finally we export the reducer functions (that are to be triggered by the useDispatch() ), and the reducer
+ */
+
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -21,6 +27,6 @@ export const todoSlice = createSlice({
   },
 });
 
-export const { addTodo, removeTodo } = todoSlice.actions;
+export const { addTodo, removeTodo } = todoSlice.actions; // reducer functions (that are to be triggered by the useDispatch() )
 
-export default todoSlice.reducer;
+export default todoSlice.reducer; // the reducer

@@ -1,3 +1,9 @@
+/*
+* simple input tag and a button to capture new todo
+* here useDispatch() , is used to call the removeTodo() reducer function
+* also , useSelector() is used to access all the todos , that are stored in the state
+*/
+
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeTodo } from "../features/todo/todoSlice";

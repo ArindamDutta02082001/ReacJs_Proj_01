@@ -1,3 +1,8 @@
+/*
+* simple input tag and a button to capture new todo
+* here useDispatch() , is used to call the addTodo() reducer function
+*/
+
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../features/todo/todoSlice";
