@@ -5,10 +5,10 @@ import { configureStore } from "@reduxjs/toolkit";
  * each reducer is created for each functionality like cart , login , etc
  */
 
-
 // reducer  1
 import ToDoReducer from "../features/todo/todoSlice";
 
+// this reducerStore will be passed to <Provider> as store
 export const reducerStore = configureStore({
-  reducer: ToDoReducer,
+  reducer: { todoReducerStore: ToDoReducer },
 });
