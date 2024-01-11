@@ -1,9 +1,29 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-// Link - This is used in place of <a></a> tag , <a> tag reloads page but Link gives us single page effect
-//NavLink - Similar to Link , it has an extra feature that can recognize if user is active on the Link or not
-//functioning → they drive the user to a /path in the url
+/*
+ * Link
+ * This is used in place of <a></a> tag , <a> tag reloads page but Link gives us single page effect
+ * NavLink
+ * Similar to Link + extra feature that can recognize if user is active on that Link or not 
+ * if we write exact then the className with active  is generated which we can target in css  on clicking the link and change its style
+ * ********************************************************
+ * 
+ 
+ * another way of changing css if link is active
+ *              
+               <NavLink
+                  to="/userPath/100"
+                  className={({ isActive }) =>
+                    `block py-2 pr-4 pl-3 duration-200 ${
+                      isActive ? "text-orange-700" : "text-gray-700"
+                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                  }
+                >
+                  User
+                </NavLink>
+ *
+ */
 
 export default function Header() {
   return (
@@ -37,38 +57,17 @@ export default function Header() {
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <li>
-                <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700"
-                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                  }
-                >
+                <NavLink exact to="/">
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/aboutPath"
-                  className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700"
-                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                  }
-                >
+                <NavLink exact to="/aboutPath">
                   About
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/contactPath"
-                  className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700"
-                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                  }
-                >
+                <NavLink exact to="/contactPath">
                   Contact
                 </NavLink>
               </li>

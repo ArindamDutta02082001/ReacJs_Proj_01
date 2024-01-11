@@ -1,9 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
+/*
+ * we an use useParams to get :id value from the url
+ */
 
-// we an use useParam to get the value
 export default function User() {
+  const result = 1 > 0 ? "large" : "small";
   const { userId } = useParams();
   return (
     <>
@@ -14,6 +17,7 @@ export default function User() {
           thing string , number etc
         </h6>
       </header>
+      <h1 className={result}>This is a User page with id {userId}</h1>
     </>
   );
 }
