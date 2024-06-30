@@ -10,7 +10,7 @@ export default function ParentComponent() {
     (event: React.MouseEvent<HTMLDivElement>) => {
       console.log("You clicked ", event);
     },
-    []
+    [dep]
   );
 
   // function handler(event: React.MouseEvent<HTMLDivElement>) {
@@ -21,6 +21,10 @@ export default function ParentComponent() {
     <>
       <button onClick={() => setState(!state)}>
         Change State Of Parent Component
+      </button>
+      <br />
+      <button onClick={() => setDep(!dep)}>
+        Change dep State
       </button>
       <MyList handler={handler} />
     </>

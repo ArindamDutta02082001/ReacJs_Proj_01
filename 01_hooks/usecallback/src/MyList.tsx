@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 type MyListProps = {
   handler: (event: React.MouseEvent<HTMLDivElement>) => void;
@@ -12,7 +12,7 @@ function MyList({ handler }: MyListProps) {
     <>
       {items.map((item, index) => (
         <div
-          style={{ border: "2px solid red", padding: "5px", margin: "5px" }}
+          style={{ border: "2px solid red", width:"20%", margin: "auto" }}
           key={index}
           onClick={handler}>
           {item}
@@ -22,4 +22,4 @@ function MyList({ handler }: MyListProps) {
   );
 }
 
-export default MyList;
+export default memo(MyList);
