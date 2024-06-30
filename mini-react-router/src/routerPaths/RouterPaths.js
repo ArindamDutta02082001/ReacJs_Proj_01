@@ -5,7 +5,8 @@ import Contact from "../staticComponent/Contact";
 import About from "../staticComponent/About";
 
 import Layout from "./Layout";
-import User from "../commonComponent/User";
+import User from "../staticComponent/User";
+import NotFound from "../staticComponent/NotFound";
 
 /*
  * this router path is created here in seperate file just to make look index.js cleaner
@@ -23,18 +24,28 @@ const routerPaths1 = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/contactPath",
+        path: "contactPath",
         element: <Contact />,
       },
       {
-        path: "/aboutPath",
+        path: "aboutPath",
         element: <About />,
       },
+    ],
+  },
+  {
+    path: "userPath",
+    element: <Layout />,
+    children: [
       {
-        path: "/userPath/:userId",
+        path: ":userId",
         element: <User />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
@@ -52,11 +63,11 @@ export default RouterPath;
 *     <Router>
 *       <Switch>
 
-*         <Route exact path="/login">
+*         <Route exact path="login">
 *           <Login />
 *         </Route>
 
-*         <Route exact path="/loginseller">
+*         <Route exact path="loginseller">
 *           <LoginSeller />
 *         </Route>
 
@@ -68,13 +79,13 @@ export default RouterPath;
 *           <Footer />
 *         </Route>
 
-*         <Route exact path="/checkout">
+*         <Route exact path="checkout">
 *           <Header />
 *           <Checkout />
 *           <Footer />
 *         </Route>
 
-*         <Route exact path="/payment">
+*         <Route exact path="payment">
 *           <Header />
 *           <Elements stripe={promise}>
 *             <Pay />
@@ -82,31 +93,31 @@ export default RouterPath;
 *           <Footer />
 *         </Route>
 
-*         <Route exact path="/thanks">
+*         <Route exact path="thanks">
 *           <Header />
 *           <Thank />
 *           <Footer />
 *         </Route>
 
-*         <Route exact path="/delivery">
+*         <Route exact path="delivery">
 *           <Header />
 *           <Delivery />
 *           <Footer />
 *         </Route>
 
-*         <Route exact path="/admin">
+*         <Route exact path="admin">
 *           <HeaderSeller />
 *           <Admin />
 *           <Footer />
 *         </Route>
 
-*         <Route exact path="/Thankyou">
+*         <Route exact path="Thankyou">
 *           <Header />
 *           <Thankyou />
 *           <Footer />
 *         </Route>
 
-*         <Route exact path="/returnandorder">
+*         <Route exact path="returnandorder">
 *           <Header />
 *           <Return />
 *           <Footer />
