@@ -6,6 +6,9 @@ export default function ParentComponent() {
   const [dep , setDep] = useState(false);
   console.log("Parent Component redered");
 
+
+  // if you dont put this inside the usecallback then clicking both the button
+  // will render the child component 
   const handler = useCallback(
     (event: React.MouseEvent<HTMLDivElement>) => {
       console.log("You clicked ", event);
@@ -13,7 +16,7 @@ export default function ParentComponent() {
     [dep]
   );
 
-  // function handler(event: React.MouseEvent<HTMLDivElement>) {
+  // function handler(event: React.MouseEvent<HTMLDivElement>) {      // --- Line 1
   //   console.log("You clicked ", event);
   // }
 
