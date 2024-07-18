@@ -58,6 +58,7 @@ const routerPaths1 = createBrowserRouter([
       },
     ],
   },
+  // wild-card route path for 404 not found
   {
     path: "*",
     element: <NotFound />,
