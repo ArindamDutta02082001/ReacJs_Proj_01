@@ -20,7 +20,7 @@ const Home = () => {
           <NavLink
             to={`/dash-one/${info.name}/${info.age}`}
             className="px-6 py-3 text-lg bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-            Dashboard 1<p>Passing data through param variables</p>
+            Dashboard 1<p>passing values directly in path url</p>
             <div>
               <code>{`/dash-one/${info.name}/${info.age}`}</code>
             </div>
@@ -30,7 +30,7 @@ const Home = () => {
           <NavLink
             to={`/dash-two?name=${info.name}&age=${info.age}`}
             className="px-6 py-3 text-lg font-medium bg-green-500 text-white rounded-lg hover:bg-green-600 focus:outline-none focus:bg-green-600">
-            Dashboard 2<p>Passing data through query parameters</p>
+            Dashboard 2<p>passing the query parameter  in url</p>
             <div>
               <code>{`/dash-two?name=${info.name}&age=${info.age}`}</code>
             </div>
