@@ -10,7 +10,7 @@ import DashboardPageFour from "../pages/DashboardFour";
 
 /*
  * this router path is created here in seperate file just to make look index.js cleaner
- * the layout is created to provide a prototype , and the <outlet> part will be replaced by home , about , contact materials as per required
+ * the layout is created to provide a prototype , and the <outlet/> part will be replaced by the <Element/> in particular path
  */
 
 const routerPaths1 = createBrowserRouter([
