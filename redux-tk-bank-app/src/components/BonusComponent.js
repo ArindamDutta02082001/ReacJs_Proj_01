@@ -5,7 +5,7 @@
  */
 
 import { useDispatch, useSelector } from "react-redux";
-import { incrementBonus } from "../features/banking/bonusSlice";
+import { incrementBonus } from "../store/slices/bonusSlice";
 
 function Bonus() {
   let bonus = useSelector((state) => state.bonusReducer.bonus);

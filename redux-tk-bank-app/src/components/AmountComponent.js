@@ -1,3 +1,13 @@
+import { useDispatch, useSelector } from "react-redux";
+import {
+  increment,
+  decrement,
+  incrementByAmount,
+  asyncThunkUsers
+} from "../store/slices/amountSlice";
+import { useState } from "react";
+
+
 /**
  * this component teaches about the  reducer and asyncThunk 
  * 
@@ -6,25 +16,19 @@
  * 
  * a button to fetch users from api 
  * 
- * here useDispatch() , is used to call the increment() , decrement() , incrementByAmount() ,asyncThunkUsers() reducer function
- * also , useSelector() is used to access the userList and total balance , that are stored in the store
- */
-
-import { useDispatch, useSelector } from "react-redux";
-import {
-  increment,
-  decrement,
-  incrementByAmount,
-} from "../features/banking/amountSlice";
-import { useState } from "react";
-import { asyncThunkUsers } from "../features/banking/amountSlice";
+*/
 
 function Amount() {
   let [spAmt, setspAmt] = useState(0);
+
+  // used to fetch the data from the store
   const money = useSelector((state) => state.amountReducer.totalMoney);
+  let users = useSelector((state) => state.amountReducer.users);
+
+  // used to set the data to the store
   const dispatchFn = useDispatch();
 
-  let users = useSelector((state) => state.amountReducer.users);
+  
 
   return (
     <div className="App">
@@ -36,14 +40,14 @@ function Amount() {
           onClick={() => {
             dispatchFn(increment());
           }}>
-          increment +
+          INC +
         </button>
 
         <button
           onClick={() => {
             dispatchFn(decrement());
           }}>
-          decrement -
+          DEC -
         </button>
 
         <input
